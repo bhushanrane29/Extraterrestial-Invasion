@@ -14,14 +14,14 @@ def run_game():
 
     # Set the background color.
     screen = pygame.display.set_mode((ai_settings.screen_width, ai_settings.screen_height))
-    pygame.display.set_caption("Alien Invasion")
+    pygame.display.set_caption("Extraterrestial Invasion")
 
     #Making a ship
     ship  = Ship(ai_settings,screen)
 
     #Making a bullet
     bullets = Group()
-    
+
     # Make an alien.
     alien = Alien(ai_settings, screen)
 
@@ -34,7 +34,7 @@ def run_game():
 
         # Update bullet positions
         gf.update_bullets(bullets)
-        
+
         # Redraw the screen during each while loop pass
         gf.update_screen(ai_settings, screen, ship, alien, bullets)
         # Make the most recently drawn screen visible.
