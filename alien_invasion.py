@@ -22,8 +22,16 @@ def run_game():
     #Making a bullet
     bullets = Group()
 
+<<<<<<< HEAD
     # Make an alien.
     alien = Alien(ai_settings, screen)
+=======
+    # Make an alien group
+    aliens = Group()
+
+    # Creating fleet of aliens
+    gf.create_fleet(ai_settings, screen, aliens)
+>>>>>>> first
 
     # Start the main loop for the game.
     while True:
@@ -36,8 +44,10 @@ def run_game():
         gf.update_bullets(bullets)
 
         # Redraw the screen during each while loop pass
-        gf.update_screen(ai_settings, screen, ship, alien, bullets)
+        gf.update_screen(ai_settings, screen, ship, aliens, bullets)
+
         # Make the most recently drawn screen visible.
         pygame.display.flip()
+
 
 run_game()
