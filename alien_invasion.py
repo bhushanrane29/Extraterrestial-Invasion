@@ -44,8 +44,6 @@ def run_game():
         # Redraw the screen during each while loop pass
         gf.update_screen(ai_settings, screen, ship, aliens, bullets)
 
-        # Make the most recently drawn screen visible.
-        pygame.display.flip()
 
 
 run_game()
